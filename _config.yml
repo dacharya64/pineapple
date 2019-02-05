@@ -10,6 +10,7 @@ github: "https://github.com/dacharya64"
 
 # Site config
 baseurl: "/pineapple"
+url: "http://devi-a.com"
 highlighter: rouge
 sass:
   sass_dir: assets/scss
