@@ -1,12 +1,12 @@
 # User config
-author: "Pineapple"
-tagline: "Pineapple Certfied Jekyll Theme"
-description: "In 1493, explorer Christopher Columbus found pineapples on Guadeloupe Island in the Caribbean. Pineapple on pizza soon followed..."
-keywords: "Pineapple, Pineapple Pizza, Pineapple House"
-email: "pineapple@example.com"
-linkedin: "https://www.linkedin.com/"
-twitter: "https://twitter.com/"
-github: "https://github.com/"
+author: "Devi Acharya"
+tagline: "Devi's Portfolio"
+description: "I'm Devi Acharya -- a game developer and researcher currently pursuing my Ph.D. in Computational Media at the University of California - Santa Cruz."
+keywords: ""
+email: "dacharya64@gmail.com"
+linkedin: "https://www.linkedin.com/in/dacharya"
+twitter: "https://twitter.com/dacharya64"
+github: "https://github.com/dacharya64"
 
 # Site config
 baseurl: "/pineapple"

@@ -14,15 +14,15 @@
 	<main class="content">
 		<section class="intro">
 			<div class="container">
-				<h2>About me.</h2>
+				<h2>About me</h2>
 				<p>{{ site.description }}</p>
 			</div>
 		</section>
 		<section class="projects">
 			<div class="container">
-				<h2>Projects I have worked on.</h2>
+				<h2>My projects</h2>
 				<ul class="projects-list">
-					{% for item in site.categories.projects reversed %}
+					{% for item in site.categories.projects | where: "games", name-of-keywords reversed %}
 						<li>
 							<a href="{{ item.url | prepend: site.baseurl }}">
 								<div class="img-wrapper">
