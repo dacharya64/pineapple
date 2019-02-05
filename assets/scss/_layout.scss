@@ -51,7 +51,7 @@
 	@media (min-width: $breakpoint-medium) {
 		p {
 			font-size: 2.7rem;
-			max-width: 80%;
+			max-width: 100%;
 		}
 	}
 }
@@ -103,14 +103,11 @@
 
 	.img-wrapper {
 		position: relative;
-		display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+
 		&:before {
 			content: "View Project";
 			color: $color-white;
-			@extend .h2;
+			@extend .h4;
 			font-weight: 800;
 			position: absolute;
 			top: 50%;
@@ -143,9 +140,6 @@
 
 	img {
 		width: 100%;
-		flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%
 	}
 
 	span {
@@ -372,4 +366,21 @@
 .contact,
 .follow {
 	margin-bottom: 3rem;
+}
+
+b, strong {
+	color: #22C5B6;
+}
+
+a {
+	-o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  /* ...and now override with proper CSS property */
+  transition:color .2s ease-out, background 1s ease-in;
+}
+
+a:hover {
+	color: #22C5B6;
 }
