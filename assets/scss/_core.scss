@@ -26,11 +26,11 @@ h2,
 	color: $color-secondary;
 	display: block;
 	font-family: $font-lekton;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: .2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
     line-height: 1;
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
     text-transform: uppercase;
 }
 
@@ -53,8 +53,8 @@ h4,
 	display: block;
 	font-family: $font-lekton;
     font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: .2rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
     line-height: 1;
     margin: 0.5rem 0 0 0;
     text-transform: uppercase;
@@ -62,12 +62,23 @@ h4,
 
 h3,
 .h3 {
-	color: $color-black;
+	color: $color-primary;
 	font-family: $font-poppins;
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 1;
     margin: 0;
+}
+
+h6,
+.h6 {
+	color: $color-black;
+	font-family: $font-poppins;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+
+		margin: 0.5rem 0 0 0;
 }
 
 p {

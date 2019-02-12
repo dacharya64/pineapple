@@ -4,7 +4,7 @@ permalink: /:title/
 category: games
 
 project:
-  title: "Terasology: Light and Shadow"
+  title: "Light & Shadow, Terasology"
   description: "A voxel-based capture-the-flag game"
   type: "Developer"
   url: "http://dacharya64.postach.io/post/gsoc-final-project-wrapup"

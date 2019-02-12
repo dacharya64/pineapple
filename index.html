@@ -31,7 +31,16 @@
 								</div>
 								<span class="h5">{{ item.project.type }}</span>
 								<h3>{{ item.project.title }}</h3>
-								<h4>{{ item.project.description }}</h4>
+								<h6>{{ item.project.description }}</h6>
+							</a>
+						</li>
+					{% endfor %}
+					{% for item in site.categories.games-small reversed %}
+						<li>
+							<a href="{{ item.project.url }}" target="_blank">
+								<span class="h5">{{ item.project.type }}</span>
+								<h3>{{ item.project.title }}</h3>
+								<h6>{{ item.project.description }}</h6>
 							</a>
 						</li>
 					{% endfor %}
@@ -51,7 +60,7 @@
 								</div>
 								<span class="h5">{{ item.project.type }}</span>
 								<h3>{{ item.project.title }}</h3>
-								<h4>{{ item.project.description }}</h4>
+								<h6>{{ item.project.description }}</h6>
 							</a>
 						</li>
 					{% endfor %}
@@ -61,7 +70,7 @@
 
 		<section class="projects">
 			<div class="container">
-				<h2>Here are some other projects I've made</h2>
+				<h2>Some other projects</h2>
 				<ul class="projects-list">
 					{% for item in site.categories.other reversed %}
 						<li>
@@ -71,7 +80,16 @@
 								</div>
 								<span class="h5">{{ item.project.type }}</span>
 								<h3>{{ item.project.title }}</h3>
-								<h4>{{ item.project.description }}</h4>
+								<h6>{{ item.project.description }}</h6>
+							</a>
+						</li>
+					{% endfor %}
+					{% for item in site.categories.other-small reversed %}
+						<li>
+							<a href="{{ item.project.url }}" target="_blank">
+								<span class="h5">{{ item.project.type }}</span>
+								<h3>{{ item.project.title }}</h3>
+								<h6>{{ item.project.description }}</h6>
 							</a>
 						</li>
 					{% endfor %}
