@@ -1,7 +1,7 @@
 ---
 layout: project
 permalink: /:title/
-category: other
+category: research
 
 project:
   title: "On Equal Terms"
