@@ -8,7 +8,7 @@ twitter: "https://twitter.com/dacharya64"
 github: "https://github.com/dacharya64"
 
 # Site config
-baseurl: "/"
+baseurl: ""
 url: "http://devi-a.com"
 highlighter: rouge
 sass:
