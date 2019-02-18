@@ -8,5 +8,5 @@ project:
   description: "A game about love and a salsa-dancing alien"
   type: "Writer"
   url: "#"
-  logo: "/assets/images/projects/lastnight.png"
+  logo: "/assets/images/projects/lastnight.jpg"
 ---

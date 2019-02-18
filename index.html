@@ -19,9 +19,10 @@
 				<h2>{{ site.descrption2 }}</h2>
 			</div>
 		</section>
+
 		<section class="projects">
 			<div class="container">
-				<h2>Play my games</h2>
+				<h2>My games</h2>
 				<ul class="projects-list">
 					{% for item in site.categories.games reversed %}
 						<li>
@@ -47,10 +48,10 @@
 				</ul>
 			</div>
 		</section>
-
+		
 		<section class="projects">
 			<div class="container">
-				<h2>Check out my research</h2>
+				<h2>Research and publishing</h2>
 				<ul class="projects-list">
 					{% for item in site.categories.research reversed %}
 						<li>
@@ -64,13 +65,22 @@
 							</a>
 						</li>
 					{% endfor %}
+					{% for item in site.categories.research-small reversed %}
+						<li>
+							<a href="{{ item.project.url }}" target="_blank">
+								<span class="h5">{{ item.project.type }}</span>
+								<h3>{{ item.project.title }}</h3>
+								<h6>{{ item.project.description }}</h6>
+							</a>
+						</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</section>
 
 		<section class="projects">
 			<div class="container">
-				<h2>Some other projects</h2>
+				<h2>Art and media</h2>
 				<ul class="projects-list">
 					{% for item in site.categories.other reversed %}
 						<li>

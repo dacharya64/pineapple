@@ -1,9 +1,13 @@
 /* Fonts
  ****************************************************************/
+ @import url('https://fonts.googleapis.com/css?family=Dosis:700');
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 
 $font-default: Helvetica, Arial, sans-serif;
-$font-poppins: 'Poppins', $font-default;
+$font-poppins: 'Open Sans', $font-default;
 $font-lekton: 'Lekton', $font-default;
+$font-shadows: 'Dosis', $font-default;
+
 
 /* Colors
  ****************************************************************/

@@ -8,5 +8,5 @@ project:
   description: "An online multimedia exhibition on tradeswomen"
   type: "Assistant to the Curator"
   url: "https://onequalter.ms"
-  logo: "/assets/images/projects/equalterms.png"
+  logo: "/assets/images/projects/equalterms.jpg"
 ---

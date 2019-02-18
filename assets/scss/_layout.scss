@@ -58,8 +58,8 @@
 
 .projects-list {
 	@media (min-width: $breakpoint-small) {
-		// margin-left: -1.5rem;
-		// margin-right: -1.5rem;
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
 		@include clearfix;
 
 		li {
@@ -74,7 +74,7 @@
 
 	@media (min-width: $breakpoint-medium) {
 		li {
-			width: 23%;
+			width: 25%;
 		}
 	}
 
