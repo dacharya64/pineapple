@@ -7,8 +7,8 @@
 }
 
 .header {
-	background: $color-white;
-	padding: 3rem 0 0 0;
+	background: $color-white-sand;
+	padding: 2rem 0 1em 0;
 }
 
 .logo {
@@ -24,6 +24,7 @@
 
 	a {
 		@extend .logo;
+		margin: 0 0 0 1em;
 	}
 }
 
@@ -50,7 +51,7 @@
 .intro {
 	@media (min-width: $breakpoint-medium) {
 		p {
-			font-size: 2.7rem;
+			font-size: 2rem;
 			max-width: 100%;
 		}
 	}
@@ -348,7 +349,7 @@
 	background: $color-alabaster;
 	bottom: 0;
 	left: 0;
-	padding: 5rem 0;
+	padding: 2rem 0;
 	position: fixed;
 	right: 0;
 	z-index: -1;
@@ -358,14 +359,12 @@
 .follow {
 	@media (min-width: $breakpoint-medium) {
 		float: left;
-		margin-bottom: 0;
-		width: 33.33333%;
+
 	}
 }
 
-.contact,
-.follow {
-	margin-bottom: 3rem;
+.contact a {
+	text-decoration: underline;
 }
 
 b, strong {

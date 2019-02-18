@@ -2,6 +2,24 @@ html {
 	font-size: 62.5%;
 }
 
+footer {
+	font-family: $font-poppins;
+	color: $color-secondary;
+	font-size: 0.75em;
+}
+
+footer a {
+	font-family: $font-poppins;
+	color: $color-secondary;
+}
+
+
+header a {
+	font-family: $font-poppins;
+	color: $color-secondary;
+	font-size: 1em;
+}
+
 body {
 	background: $color-white;
 	color: $color-black;
