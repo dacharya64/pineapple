@@ -88,6 +88,10 @@ h3,
     margin: 0;
 }
 
+a h3:hover {
+	text-decoration: underline;
+}
+
 h6,
 .h6 {
 	color: $color-black;
