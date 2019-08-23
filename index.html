@@ -1,114 +1,382 @@
----
----
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<title>{{ site.tagline }}</title>
-	<meta name="author" content="{{ site.author }}">
-	<meta name="description" content="{{ site.description }}">
-	<meta name="keywords" content="{{ site.keywords }}">
-	{% include head.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Devi's Portfolio</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=News+Cycle:400,700">
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.min.css">
 </head>
-<body>
-	{% include header.html %}
-	<main class="content">
-		<section class="intro">
-			<div class="container">
-				<h2>About me</h2>
-				<p>{{ site.description }}</p>
-				<h2>{{ site.descrption2 }}</h2>
-			</div>
-		</section>
 
-		<section class="projects">
-			<div class="container">
-				<h2>My games</h2>
-				<ul class="projects-list">
-					{% for item in site.categories.games reversed %}
-						<li>
-							<a href="{{ item.project.url }}" target="_blank">
-								<div class="img-wrapper">
-									<img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
-								</div>
-								<span class="h5">{{ item.project.type }}</span>
-								<h3>{{ item.project.title }}</h3>
-								<h6>{{ item.project.description }}</h6>
-							</a>
-						</li>
-					{% endfor %}
-					{% for item in site.categories.games-small reversed %}
-						<li>
-							<a href="{{ item.project.url }}" target="_blank">
-								<span class="h5">{{ item.project.type }}</span>
-								<h3>{{ item.project.title }}</h3>
-								<h6>{{ item.project.description }}</h6>
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</section>
-		
-		<section class="projects">
-			<div class="container">
-				<h2>Research and publishing</h2>
-				<ul class="projects-list">
-					{% for item in site.categories.research reversed %}
-						<li>
-							<a href="{{ item.project.url }}" target="_blank">
-								<div class="img-wrapper">
-									<img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
-								</div>
-								<span class="h5">{{ item.project.type }}</span>
-								<h3>{{ item.project.title }}</h3>
-								<h6>{{ item.project.description }}</h6>
-							</a>
-						</li>
-					{% endfor %}
-					{% for item in site.categories.research-small reversed %}
-						<li>
-							<a href="{{ item.project.url }}" target="_blank">
-								<span class="h5">{{ item.project.type }}</span>
-								<h3>{{ item.project.title }}</h3>
-								<h6>{{ item.project.description }}</h6>
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</section>
-
-		<section class="projects">
-			<div class="container">
-				<h2>Art and media</h2>
-				<ul class="projects-list">
-					{% for item in site.categories.other reversed %}
-						<li>
-							<a href="{{ item.project.url }}" target="_blank">
-								<div class="img-wrapper">
-									<img src="{{ item.project.logo | prepend: site.baseurl }}" alt="{{ item.project.title }}" />
-								</div>
-								<span class="h5">{{ item.project.type }}</span>
-								<h3>{{ item.project.title }}</h3>
-								<h6>{{ item.project.description }}</h6>
-							</a>
-						</li>
-					{% endfor %}
-					{% for item in site.categories.other-small reversed %}
-						<li>
-							<a href="{{ item.project.url }}" target="_blank">
-								<span class="h5">{{ item.project.type }}</span>
-								<h3>{{ item.project.title }}</h3>
-								<h6>{{ item.project.description }}</h6>
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</section>
-	</main>
-	{% include footer.html %}
-	<script src="{{ "/assets/scripts/vendor/scrollreveal.min.js" | prepend: site.baseurl }}"></script>
-	<script src="{{ "/assets/scripts/home.js" | prepend: site.baseurl }}"></script>
+<body style="margin-bottom: 20px;">
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container-fluid"><a class="navbar-brand text-left" href="#">Devi Acharya &nbsp;| &nbsp;Designer and Developer</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto"></ul>
+            </div><a href="mailto:dacharya64@gmail.com"><i class="fa fa-envelope" style="margin-right: 10px;margin-left: 10px;font-size: 24px;"></i></a><a href="https://twitter.com/dacharya64"><i class="fa fa-twitter" style="margin-right: 10px;margin-left: 10px;font-size: 24px;"></i></a>
+            <a
+                href="https://www.linkedin.com/in/dacharya/"><i class="fa fa-linkedin" style="margin-right: 10px;margin-left: 10px;font-size: 24px;"></i></a><a href="https://github.com/dacharya64" style="font-size: 24px;"><i class="fa fa-github" style="margin-right: 10px;margin-left: 10px;"></i></a>
+                <a
+                    href="https://www.twitch.tv/scholarsplay/"><i class="fa fa-twitch" style="margin-left: 10px;margin-right: 10px;font-size: 24px;"></i></a>
+    </div>
+    </nav>
+    </div>
+    <section style="padding: 20px;margin: 0px 50px 0px;">
+        <p class="lead"><br>I'm <strong>Devi Acharya</strong>—a game developer and researcher currently pursuing my Ph.D. in&nbsp;<strong>Computational Media</strong>&nbsp;at the University of California - Santa Cruz. My work focuses on&nbsp;<strong>interactive narrative</strong>&nbsp;and&nbsp;<strong>emergent storytelling</strong>            in games and other forms of interactive media.<br></p>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="filtr-controls"><span class="active" data-filter="all">all </span><span data-filter="1">Digital Games<br></span><span data-filter="2">Tabletop and Roleplaying Games</span><span data-filter="3">Interactive Fiction</span><span data-filter="4">Research</span>
+                <span
+                    data-filter="5">Art and Media</span>
+            </div>
+            <div class="row filtr-container">
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="1">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3"><img class="img-fluid" src="/assets/img/cl.jpg"></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Lead Artist,&nbsp;<em>Fusion Galaxy</em><br></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">A mobile game made with the Massachusetts Digital Games Institute about collecting elements and crafting the universe.</p><a class="btn btn-primary text-center" role="button" style="margin: 5px 5px 5px 5px;" href="https://play.google.com/store/apps/details?id=com.massdigi.crafting"
+                                        target="_blank">Get it on Google Play</a><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://github.com/Terasology/LightAndShadow" target="_blank">Github Repository</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="1">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3" data-category=""><img class="img-fluid" src="/assets/img/terasology.jpg"></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center" data-category="">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Developer,&nbsp;<em>Light &amp;&nbsp;Shadow</em><br></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">A mod for open source game <em>Terasology, </em>creating a capture the flag game mode as part of Google Summer of Code.</p><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://dacharya64.postach.io/post/gsoc-final-project-wrapup"
+                                        target="_blank">About the Project</a><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://github.com/Terasology/LightAndShadow" target="_blank">Github Repository</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="1">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3" data-category=""><img class="img-fluid" src="/assets/img/rs.jpg"></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center" data-category="">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">UI Artist,&nbsp;<em>Red Survivor</em><br></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">A survival strategy game for desktop involving killer robots in a war-torn Russia. Made with a team at Mustachio Games.&nbsp;</p><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://mustachiogames.itch.io/red-survivor"
+                                        target="_blank">Download from itch.io</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="1">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3" data-category=""><img class="img-fluid" src="/assets/img/lastnight.jpg"></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center" data-category="">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Writer,&nbsp;<em>Last Night on Planet Earth</em><br></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">A visual novel by Dejobaan Games about a salsa-dancing alien and the end of the world.&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="1">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center" data-category=""><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://dacharya64.itch.io/daedalus" target="_blank">Play on itch.io</a></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center" data-category="">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Developer, <em>Daedalus</em></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">Created for Twine Games Jam, <em>Daedalus </em>is a Unity game with Twine integration about trying to fly to freedom.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="1">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://play.google.com/store/apps/details?id=com.glowlime.lucid" target="_blank">Get it on Google Play</a></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Designer, <em>Lucid</em></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">Made with a team at Glowlime Games, Lucid is a narrative game about disappearances and the Nightmares that cause them.&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="3">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/unnamed%20(2).jpg"></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Author, <em>The Abyss</em></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">An interactive fiction game about identity and control in a surreal and twisted world of the mind.</p><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="http://media.textadventures.co.uk/games/ob1-NCeIr0a6DPoCKNUxyw/abyss_final2.html"
+                                        target="_blank">Play online</a><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://play.google.com/store/apps/details?id=inky.abyss" target="_blank"><strong>Get it on </strong>Google Play</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="2">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/a63f8cd7-1d9b-446d-9b34-e5c2382ee167%20(2).jpg"></div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Designer, <em>Pantheon</em></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">A tabletop game about competing to be the best god. Players each play different gods vying for control and influence of a new land.&nbsp;</p><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;"
+                                        href="https://dacharya64.postach.io/post/pantheon-a-game-about-being-the-best-god" target="_blank">About the Project</a><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://docs.google.com/document/d/1eqrJa-Q8CfgnClULRVkkZlAWG_sazJkzbv0075AyYdg/edit"
+                                        target="_blank">Rulebook and Design Document</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="2">
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://dacharya64.postach.io/post/introducing-skyfinder-a-lightweight-tabletop-rpg-system" target="_blank">About the Project</a><a class="btn btn-primary"
+                                role="button" style="margin: 5px 5px 5px 5px;" href="https://docs.google.com/document/u/5/d/e/2PACX-1vSMGcfd211JfLQ-Rl3K9P2IvLmWxUasBRG-SQNgfQsi2FXIz30UkCg38rrYddPnikvOQTSFLKcHg_22/pub" target="_blank">Rulebook</a></div>
+                        <div
+                            class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-left" style="margin: 20px 0px 5px;">Designer, <em>Skyfinder RPG</em></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead text-left">A lightweight tabletop RPG system about searching the skies and exploring the corners of the known universe.&nbsp;</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="3">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="http://media.textadventures.co.uk/games/PrtGMJP4QUep4mV_A7yiKg/ark_final.html" target="_blank">Play Online</a></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Co-Author, <em>The Ark</em></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">An interactive fiction puzzle game set in an abandoned spacecraft. Explore the ship to find a way out, and to discover what became of those who were here before.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="5">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://github.com/dacharya64/Tesnov" target="_blank">Github Repository</a><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://imgur.com/a/3H4BT"
+                            target="_blank">Gallery</a></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Developer, Tesnov Rendering</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">A 3D rendering of legal graffiti site Tesnov in Prague, Czechia. Created in Unity, this rendering lets you explore some of the images on site as they were at the time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="3">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/subq.jpg"></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Interactivity Editor, <em>sub-Q Magazine</em></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">An online magazine for interactive fiction, particularly in the areas of science fiction / fantasy / horror. I work to review pieces for publication and help authors polish their work, as well as conducting author interviews.&nbsp;</p>
+                                <a
+                                    class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://sub-q.com" target="_blank">Check it out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="4">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/reu.jpg"></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Research Experience for Undergraduates, Iowa State University</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">I worked with a team at ISU studying spatial updating in virtual reality. We created several VR environments using Unity and the HTC Vive, and ran participants through a series of triangle completion tests in these environments,
+                                    studying how well they were able to navigate and orient themselves when physically walking and turning in the environment versus using the controller for movement.&nbsp;</p><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;"
+                                    href="https://github.com/dacharya64/ViveGame" target="_blank">Github Repository</a><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://drive.google.com/file/d/0B7kmvXx0HErsUjBCNXd1cmRHNFE/view"
+                                    target="_blank">Research Poster</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center filtr-item" data-category="4">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/devi-poster.jpg"></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Schiff Fellowship, Brandeis University</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">I led a team of undergraduate researchers at Brandeis University studying the effects of different virtual reality environments on EEG scans, using the HTC Vive and Museband EEG reader. We devised a study and created several
+                                    virtual reality environments for testing.&nbsp;</p><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://drive.google.com/file/d/1mvRKJEv9w9WL4iRrcLY3VjIlGxo6l9ps/view" target="_blank">Research Poster</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center text-center filtr-item" data-category="5">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/equalterms.jpg"></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Assistant to the Curator, <em>On Equal Terms</em></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">Worked with researcher and author Susan Eisenberg on a multimedia online exhibition about women in the construction trades. Worked on putting together the website, recording audio, and editing video for this project as
+                                    part of the Women's Studies Research Center.</p><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://onequalter.ms/" target="_blank">Check it out</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center text-center filtr-item" data-category="4">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://mohistory.org/blog/the-avenues-of-activism-project-teens-record-history/" target="_blank">About Avenues of Activism</a></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;"><em>Avenues of Activism</em> and <em>Between Two Worlds</em>, Missouri History Museum</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">Research and created exhibits with a team as part of the Teens Make History program at the Missouri History Museum. <em>Between Two Worlds </em>was a physical installation about veterans' transition back to life in St.
+                                    Louis, featuring recorded oral histories and artifacts from the veterans. <em>Avenues of Activism </em>was an online series of oral histories from St. Louis activists.&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center text-center filtr-item" data-category="5">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/animation.gif"></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">"Dusk to Dawn" and "Genhance"&nbsp;</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">Short animated films created in After Effects and Photoshop. "Dusk to Dawn" is a teaser trailer for a steampunk / fantasy-themed show, and "Genhance" is a satiric video promoting genetic enhancement.</p><a class="btn btn-primary"
+                                    role="button" style="margin: 5px 5px 5px 5px;" href="https://vimeo.com/album/5756343" target="_blank">Watch on Vimeo</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center text-center filtr-item" data-category="5">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><img class="img-fluid" src="/assets/img/circuitree.gif"></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Maker, CircuiTree</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">An art installation featuring a metal tree-shaped sculpture set on a pedestal connected to an Arduino with a heartbeat sensor and speakers. Lights flash and speakers emit sound in time to the viewer's heartbeat.</p><a class="btn btn-primary"
+                                    role="button" style="margin: 5px 5px 5px 5px;" href="https://github.com/dacharya64/ArduinoTree" target="_blank">Github Repository</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center d-xl-flex align-items-xl-center text-center filtr-item" data-category="5">
+                <div class="row text-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 align-self-center"><a class="btn btn-primary" role="button" style="margin: 5px 5px 5px 5px;" href="https://drive.google.com/file/d/0B7kmvXx0HErsNzFQT1B0SWZ6Zms/view" target="_blank">See the Storyboard</a></div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-9 text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="text-left" style="margin: 20px 0px 5px;">Director of Photography, CET Study Abroad</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead text-left">Created a short film as a three-person team as part of my study abroad program in Prague, Czechia. The film is about a boy whose dog is hit by a car, and his plan for revenge against the car's driver.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section><a class="cd-top js-cd-top cd-top--fade-out cd-top--show" style="background-image:url(&quot;/assets/img/cd-top-arrow.svg&quot;);" href="#0">Top</a>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script src="/assets/js/script.min.js"></script>
 </body>
+
 </html>
